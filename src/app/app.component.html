@@ -1,0 +1,92 @@
+
+
+<div class="container body">
+
+
+	<div class="wrapper">
+	<!-- COMPANY INFORMATION -->
+    <div class="company-info">
+        <h3>Demo Info</h3>
+
+        <ul>
+            <li><i class="fa fa-road"></i> 2nd Floor, No 16, Sy 60/1, BHAWAN Sai Nagar,
+                Off MARTHALII Gate, Bangalore 560037</li>
+            <li><i class="fa fa-phone"></i>  +91-80-41780293</li>
+            <li><i class="fa fa-envelope"></i> demo@info.com</li>
+        </ul>
+    </div>
+		<!-- CONTACT FORM -->
+		<div class="contact">
+        <form id="contact-form" #contactUsForm="ngForm" (ngSubmit)="contactNewRecord(contactUsForm)">
+
+            <p>
+                <label>First Name</label>
+                <input type="text" name="first_name" id="name"[(ngModel)]="contactUsDetails.first_name" ngModel #name="ngModel" required>
+            </p>
+
+            <p>
+                <label>Last Name</label>
+                <input type="text" name="last_name" id="last_name"[(ngModel)]="contactUsDetails.last_name" ngModel #last_name="ngModel" required>
+            </p>
+
+            <p>
+                <label>E-mail Address</label>
+                <!-- <input type="email" name="email" id="email" required> -->
+                <input type="email" name="email_address" id="email_address"[(ngModel)]="contactUsDetails.email_address" ngModel #email_address="ngModel" required>
+
+            </p>
+
+            <p>
+                <label>Contact Number</label>
+                <!-- <input type="text" name="phone" id="phone"> -->
+                <input type="text" name="contact_number" id="contact_number"[(ngModel)]="contactUsDetails.contact_number" ngModel #contact_number="ngModel" required>
+
+            </p>
+
+            <p class="full">
+                <label>Street Name</label>
+                <textarea name="street_name" rows="5" id="street_name" [(ngModel)]="contactUsDetails.street_name" ngModel #street_name="ngModel"></textarea>
+
+            </p>
+            <p>
+                <label>Locality</label>
+                <input type="text" name="locality" id="locality"[(ngModel)]="contactUsDetails.locality" ngModel #locality="ngModel" required>
+            </p>
+            <p>
+                <label>pin_code</label>
+                <input type="text" name="pin_code" id="pin_code"[(ngModel)]="contactUsDetails.pin_code" ngModel #pin_code="ngModel" required>
+            </p>
+            <p>
+                <label>Dist</label>
+                <input type="text" name="district" id="district"[(ngModel)]="contactUsDetails.district" ngModel #district="ngModel" required>
+            </p>
+            <p>
+                <label>state</label>
+                <input type="text" name="state" id="state"[(ngModel)]="contactUsDetails.state" ngModel #state="ngModel" required>
+            </p>
+            <p>
+                <label>country</label>
+                <input type="text" name="country" id="country"[(ngModel)]="contactUsDetails.country" ngModel #country="ngModel" required>
+            </p>
+            <p>
+                <label>subject</label>
+                <input type="text" name="subject" id="subject"[(ngModel)]="contactUsDetails.subject" ngModel #subject="ngModel" required>
+            </p>
+            <p class="full">
+                <label>Message</label>
+                <textarea name="message" rows="5" id="message" [(ngModel)]="contactUsDetails.message" ngModel #message="ngModel"></textarea>
+
+            </p>
+            <p>
+                <label>subject</label>
+                <input type="file" name="file_name" id="file_name"[(ngModel)]="contactUsDetails.file_name" ngModel #subject="ngModel" required>
+            </p>
+
+            <p class="full">
+                <button type="button" class="btn btn-primary" type="submit" [disabled]="contactUsForm.invalid">Submit</button>
+            </p>
+
+        </form>
+    </div>
+  </div>
+</div>
